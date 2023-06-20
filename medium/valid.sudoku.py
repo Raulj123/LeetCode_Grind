@@ -37,3 +37,6 @@ board = [["5","3",".",".","7",".",".",".","."]
 
 result = isValidSudoku(board)
 print("result:", result)
+
+        #time -> o(9^2)
+        # mem -> o(9^2) 3 hashsets with that exact size 
