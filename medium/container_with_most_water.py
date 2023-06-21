@@ -1,11 +1,5 @@
-from typing import List
 
-
-height = [1,8,6,2,5,4,8,3,7]
-
-
-
-def maxArea(height: List[int]) -> int:
+def maxArea(height: list[int]) -> int:
     l,r = 0, len(height)-1
     max_area, area = 0,0
 
@@ -20,6 +14,6 @@ def maxArea(height: List[int]) -> int:
             max_area = area
     return max_area 
 
-
+height = [1,8,6,2,5,4,8,3,7]
 max_area = maxArea(height)
 print("The max area of water is:", max_area)
