@@ -1,2 +1,6 @@
-# Trying to follow neetcodes guide 
-Doing this to help me prep for interviews and because I actually like doing them(🧢).
+<div align="center">
+    <img src="media/smile.png" style="border-radius: 30px;">
+    <h2>A collection of LeetCode, AOC or random scripts done in Python.</h2>
+</div>
+
+Shoutout neetcode
