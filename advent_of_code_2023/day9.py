@@ -1,4 +1,5 @@
 from itertools import pairwise
+
 filename = "file9.txt"
 
 with open (filename) as file:
