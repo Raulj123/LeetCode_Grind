@@ -3,7 +3,8 @@
 # If we go in either dir from the halfway point it would be shorter to get thier on one side or the other. 
 
 # p2 logic: Do a horizontal scan checking if it crosses pipes(Crossing if "I" crosses meaning -- | crossed once). Get what the value of S really is by using sets and intersections. Replace S with its true val.
-# Replace those not in seen(not in the loop) with a '.' 
+# Replace those not in seen(not in the loop) with a '.'
+
 from collections import deque
 
 filename = "file10.txt"
@@ -66,7 +67,7 @@ for r, row in enumerate(data):
             assert up is None
             within = not within
         elif char == "-":
-            assert up is not None
+            assert up is not None 
         elif char in "LF":
             assert up is None
             up = char == "L"
