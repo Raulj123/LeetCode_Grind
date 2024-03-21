@@ -4,7 +4,7 @@ def get(foods,name, wish):
     v = set()
     q= deque()
     c = 0
-    imake = 0 
+    uniq = set() 
     q.append(name)
     v.add(name)
     wish = name
@@ -23,15 +23,19 @@ def get(foods,name, wish):
                 c += 1
 
 
-    
     for item in v:
 
         if item in wish:
+            
             continue
-        elif item in foods:
-            c -= 1
-    print(f"retu {c}")
-    return c
+        if item in foods:
+            continue
+        if item in uniq:
+            continue
+        else:
+            uniq.add(item)
+    
+    return uniq
 
 
 
@@ -49,10 +53,11 @@ for ing in data[2:]:
 wish = data[0].split(":")
 wish = wish[1].split(",")
 wish = [n.strip() for n in wish]
-print(f"wish: {wish}")
-res = 0
-for name in wish:
-    res += get(foods, name, wish)
-    print(res)
 
-print(res)
+set_ = set()
+for name in wish:
+    set_.update(list((get(foods, name, wish))))
+    # print(f"resul for {name} is {len(set_)} and {set_}")
+    
+
+print(f"so yea: {len(set_)}")
